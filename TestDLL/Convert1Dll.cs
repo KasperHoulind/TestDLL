@@ -12,14 +12,14 @@ namespace TestDLL
         private const double Grams = 0.0353;
 
 
-        public static double OzToGrams(double ounces)
+        public double OzToGrams(double ounces)
         {
             //Converts Ounces to Grams by multiplying with 28.3495
             return ounces * Oz;
         }
 
 
-        public static double GramsToOz(double grams)
+        public double  GramsToOz(double grams)
         {
             //Converts grams to Ounces by multiplying with 0.0353
             return grams * Grams;

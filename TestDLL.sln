@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDLL", "TestDLL\TestDLL.csproj", "{EB1B7319-482D-434D-A0B5-BDECAF31240B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPServer1", "TCPServer1\TCPServer1.csproj", "{98DE5610-6212-40B9-93F6-079CCE249369}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCPServer1", "TCPServer1\TCPServer1.csproj", "{98DE5610-6212-40B9-93F6-079CCE249369}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPClient1", "TCPClient1\TCPClient1.csproj", "{9403900A-D8E0-4154-A45B-9A4A7A5831F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TCPClient1", "TCPClient1\TCPClient1.csproj", "{9403900A-D8E0-4154-A45B-9A4A7A5831F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestDll", "UnitTestDll\UnitTestDll.csproj", "{7E1F19FC-C8DA-4EE9-96C8-1DBA2B7EECFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{9403900A-D8E0-4154-A45B-9A4A7A5831F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9403900A-D8E0-4154-A45B-9A4A7A5831F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9403900A-D8E0-4154-A45B-9A4A7A5831F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E1F19FC-C8DA-4EE9-96C8-1DBA2B7EECFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E1F19FC-C8DA-4EE9-96C8-1DBA2B7EECFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E1F19FC-C8DA-4EE9-96C8-1DBA2B7EECFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E1F19FC-C8DA-4EE9-96C8-1DBA2B7EECFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,7 @@ namespace TCPServer1
         {
             var server = new Server(7);
             server.Start();
-            Console.ReadKey();
+            Console.ReadLine();
 
         }
     }

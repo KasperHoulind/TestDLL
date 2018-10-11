@@ -11,20 +11,21 @@ namespace TCPClient1
 
         public void Start()
         {
-            TcpClient client = new TcpClient("localhost", 7);
-            using (StreamWriter sw = new StreamWriter(client.GetStream()))
+            var client = new TcpClient("localhost",7);
+
+            while (true)
             {
-                string incommingstring = Console.ReadLine();
-                using StreamReader sr = new StreamReader(client.GetStream()))
-                {
-                    Console.WriteLine($"string in ={incommingstring}");
+                var ns = client.GetStream(); 
+                var sr = new StreamReader(ns);
+                var sw = new StreamWriter(ns);
+                sw.AutoFlush = true;
 
-                    sw.WriteLine(incommingstring);
-                    sw.Flush();
-                }
-
+                sw.WriteLine(Console.ReadLine());
+                Console.WriteLine(sr.ReadLine());
             }
+
+
         }
     }
 }
-}
+

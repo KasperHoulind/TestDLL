@@ -6,7 +6,10 @@ namespace TCPClient1
     {
         static void Main(string[] args)
         {
-           
+            Client TCPClient = new Client();
+
+            TCPClient.Start();
+            Console.ReadLine();
         }
     }
 }

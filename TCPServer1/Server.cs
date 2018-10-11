@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -25,14 +25,14 @@ namespace TCPServer1
             while (true)
             {
                 var client = listener.AcceptTcpClient();
-                Task.Run(() => HandleClient(client));
+                Task.Run(() => DoClient(client));
             }
 
-
+            
         }
-        private void HandleClient(TcpClient client)
+        private void DoClient(TcpClient client)
         {
-            Console.WriteLine("Handling Client");
+            Console.WriteLine("Waiting for Client");
             while (client.Connected)
             {
                 var ns = client.GetStream();
@@ -43,22 +43,28 @@ namespace TCPServer1
 
                 incStrings = sr.ReadLine().Split(' ');
 
-                string ConvertOptions = incStrings[0].ToLower();
-                if (ConvertOptions == "togram")
+                Convert1Dll Convert = new Convert1Dll();
+
+                string ConvertOptions = incStrings[0];
+                if (ConvertOptions == "OzToGram")
                 {
-                    double weight = double.Parse(incStrings[1]);
-                    double result = Convert1Dll.OzToGrams(weight);
+                    double grams = double.Parse(incStrings[1]);
+                    double result = Convert.OzToGrams(grams);
+                    System.Console.WriteLine(result);
+                    sw.WriteLine(result);
+
+                    
+                }
+
+                else if (ConvertOptions == "GramsToOz")
+                {
+                    double oz = double.Parse(incStrings[1]);
+                    double result = Convert.GramsToOz(oz);
                     sw.WriteLine(result);
                 }
 
-                else if (ConvertOptions == "tooz")
-                {
-                    double weight = double.Parse(incStrings[1]);
-                    double result = Convert1Dll.GramsToOz(weight);
-                    sw.WriteLine(result);
-                }
-
-            }
+                sw.Flush();
+            } 
 
         }
 
@@ -66,5 +72,5 @@ namespace TCPServer1
     }
 
 }
-}
+
 
