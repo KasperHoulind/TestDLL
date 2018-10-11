@@ -7,7 +7,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TCPClient1\TCPClient1.csproj" />
-    <ProjectReference Include="..\TestDLL\TestDLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="TestDLL">
+      <HintPath>..\TestDLL\bin\Debug\TestDLL.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
